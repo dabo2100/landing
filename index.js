@@ -59,3 +59,45 @@
   );
   observer.observe(section);
 })();
+
+(function () {
+  var accordion = document.getElementById('curriculum-accordion');
+  if (!accordion) return;
+
+  var triggers = accordion.querySelectorAll('[data-accordion-trigger]');
+  var items = accordion.querySelectorAll('.curriculum-accordion-item');
+
+  function closeAll() {
+    items.forEach(function (item) {
+      item.classList.remove('is-open');
+      var btn = item.querySelector('[data-accordion-trigger]');
+      var panel = item.querySelector('.curriculum-accordion-content');
+      var inner = item.querySelector('.accordion-content-inner');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (panel && inner) panel.style.maxHeight = '0';
+    });
+  }
+
+  function openItem(item) {
+    var panel = item.querySelector('.curriculum-accordion-content');
+    var inner = item.querySelector('.accordion-content-inner');
+    var btn = item.querySelector('[data-accordion-trigger]');
+    if (!panel || !inner) return;
+    var height = inner.scrollHeight;
+    panel.style.maxHeight = height + 'px';
+    item.classList.add('is-open');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      var item = trigger.closest('.curriculum-accordion-item');
+      if (!item) return;
+      var isOpen = item.classList.contains('is-open');
+      closeAll();
+      if (!isOpen) {
+        openItem(item);
+      }
+    });
+  });
+})();
