@@ -1,0 +1,33 @@
+/* Tailwind handles styling. This file only overrides for mobile nav open state. */
+:root {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  #nav.is-open {
+    transform: translateX(0);
+  }
+}
+
+/* العدادات: اتجاه الأرقام */
+#market-insights [data-target] {
+  direction: ltr;
+}
+
+/* Tech stack marquee: infinite scroll right-to-left, pause on hover */
+.marquee-track {
+  animation: marquee-scroll 45s linear infinite;
+}
+
+#marquee-section:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
