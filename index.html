@@ -12,6 +12,7 @@
     <!-- Tailwind config.js -->
     <script>
       tailwind.config = {
+        darkMode: 'media',
         theme: {
           extend: {
             fontFamily: { sans: ['Cairo', 'system-ui', 'sans-serif'] },
@@ -33,19 +34,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body class="bg-[#F8F9FE] text-[#1f2937] font-sans antialiased overflow-x-hidden">
+  <body class="bg-[#F8F9FE] text-[#1f2937] font-sans antialiased overflow-x-hidden transition-colors duration-300 dark:bg-[#0F172A] dark:text-[#F1F5F9]">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white shadow-sm border-b border-[#E5E7EB]">
+    <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white shadow-sm border-b border-[#E5E7EB] transition-colors duration-300 dark:bg-[#0F172A] dark:border-[#334155] dark:shadow-none">
       <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
-        <a href="#" class="text-lg font-bold tracking-tight text-[#1f2937]">Introduction To AI</a>
-        <nav id="nav" class="fixed md:relative inset-0 top-16 md:inset-auto flex flex-col md:flex-row items-stretch md:items-center gap-0 md:gap-7 bg-[#F8F9FE] md:bg-transparent p-6 md:p-0 translate-x-full md:translate-x-0 transition-transform duration-200">
-          <a href="#outcomes" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] text-sm font-medium text-[#6B7280] hover:text-[#1f2937]">مخرجات التعلم</a>
-          <a href="#curriculum" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] text-sm font-medium text-[#6B7280] hover:text-[#1f2937]">المنهج</a>
-          <a href="#pricing" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] text-sm font-medium text-[#6B7280] hover:text-[#1f2937]">الأسعار</a>
-          <a href="#faq" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] text-sm font-medium text-[#6B7280] hover:text-[#1f2937]">الأسئلة الشائعة</a>
-          <a href="#cta" class="mt-4 md:mt-0 inline-flex justify-center px-5 py-2.5 rounded-xl font-semibold text-white bg-[#6F42C1] hover:bg-[#5B3A9E] transition">احجز مقعدك</a>
+        <a href="#" class="text-lg font-bold tracking-tight text-[#1f2937] dark:text-[#F1F5F9]">Introduction To AI</a>
+        <nav id="nav" class="fixed md:relative inset-0 top-16 md:inset-auto flex flex-col md:flex-row items-stretch md:items-center gap-0 md:gap-7 bg-[#F8F9FE] md:bg-transparent p-6 md:p-0 translate-x-full md:translate-x-0 transition-transform duration-200 dark:bg-[#0F172A] md:dark:bg-transparent">
+          <a href="#outcomes" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] dark:border-[#334155] text-sm font-medium text-[#6B7280] hover:text-[#1f2937] dark:text-[#94A3B8] dark:hover:text-[#F1F5F9]">مخرجات التعلم</a>
+          <a href="#curriculum" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] dark:border-[#334155] text-sm font-medium text-[#6B7280] hover:text-[#1f2937] dark:text-[#94A3B8] dark:hover:text-[#F1F5F9]">المنهج</a>
+          <a href="#pricing" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] dark:border-[#334155] text-sm font-medium text-[#6B7280] hover:text-[#1f2937] dark:text-[#94A3B8] dark:hover:text-[#F1F5F9]">الأسعار</a>
+          <a href="#faq" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] dark:border-[#334155] text-sm font-medium text-[#6B7280] hover:text-[#1f2937] dark:text-[#94A3B8] dark:hover:text-[#F1F5F9]">الأسئلة الشائعة</a>
+          <a href="#cta" class="mt-4 md:mt-0 inline-flex justify-center px-5 py-2.5 rounded-xl font-semibold text-white bg-[#6F42C1] hover:bg-[#5B3A9E] dark:bg-[#8B5CF6] dark:hover:bg-[#7C3AED] transition">احجز مقعدك</a>
         </nav>
-        <button id="menu-toggle" class="md:hidden flex flex-col gap-1 p-2 text-[#1f2937]" aria-label="فتح القائمة">
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1 p-2 text-[#1f2937] dark:text-[#F1F5F9]" aria-label="فتح القائمة">
           <span class="w-5 h-0.5 bg-current rounded"></span>
           <span class="w-5 h-0.5 bg-current rounded"></span>
           <span class="w-5 h-0.5 bg-current rounded"></span>
@@ -55,86 +56,86 @@
 
     <main class="pt-16">
       <!-- Hero -->
-      <section class="relative py-16 md:py-24 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(111,66,193,0.12),transparent)] pointer-events-none"></div>
+      <section class="relative py-16 md:py-24 overflow-hidden transition-colors duration-300">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(111,66,193,0.12),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(139,92,246,0.2),transparent)] pointer-events-none"></div>
         <div class="relative max-w-5xl mx-auto px-5 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <!-- كارد شبيه بنافذة المتصفح (على الشمال) -->
           <div class="flex-shrink-0 order-2 lg:order-2 relative wow animate__animated animate__fadeInUp">
-            <div class="w-full max-w-[320px] rounded-2xl bg-white border border-[#E5E7EB] shadow-xl overflow-hidden">
+            <div class="w-full max-w-[320px] rounded-2xl bg-white border border-[#E5E7EB] shadow-xl overflow-hidden transition-colors duration-300 dark:bg-[#1E293B] dark:border-[#334155] dark:shadow-xl dark:shadow-black/20">
               <!-- هيدر المتصفح -->
-              <div class="flex items-center gap-2 px-4 py-3 bg-[#F3F4F6] border-b border-[#E5E7EB]">
+              <div class="flex items-center gap-2 px-4 py-3 bg-[#F3F4F6] border-b border-[#E5E7EB] dark:bg-[#334155] dark:border-[#475569]">
                 <span class="w-3 h-3 rounded-full bg-[#EF4444]"></span>
                 <span class="w-3 h-3 rounded-full bg-[#F59E0B]"></span>
                 <span class="w-3 h-3 rounded-full bg-[#22C55E]"></span>
-                <div class="flex-1 mx-3 py-1.5 px-3 rounded-lg bg-white border border-[#E5E7EB] text-xs text-[#6B7280] text-center">eraapro.com/ai-course</div>
+                <div class="flex-1 mx-3 py-1.5 px-3 rounded-lg bg-white border border-[#E5E7EB] text-xs text-[#6B7280] text-center dark:bg-[#0F172A] dark:border-[#334155] dark:text-[#94A3B8]">eraapro.com/ai-course</div>
               </div>
               <!-- محتوى الشبكة 2x2 -->
               <div class="p-3 grid grid-cols-2 gap-2">
-                <div class="rounded-xl bg-[#FEF3C7] p-4 flex flex-col items-center justify-center text-center min-h-[100px]">
-                  <i class="fab fa-python text-4xl text-[#3776AB] mb-2"></i>
-                  <span class="text-sm font-semibold text-[#1f2937]">Python</span>
+                <div class="rounded-xl bg-[#FEF3C7] dark:bg-[#422006] p-4 flex flex-col items-center justify-center text-center min-h-[100px] transition-colors duration-300">
+                  <i class="fab fa-python text-4xl text-[#3776AB] dark:text-[#93C5FD] mb-2"></i>
+                  <span class="text-sm font-semibold text-[#1f2937] dark:text-[#F1F5F9]">Python</span>
                 </div>
-                <div class="rounded-xl bg-[#E9D5FF] p-4 flex flex-col items-center justify-center text-center min-h-[100px]">
-                  <i class="fas fa-robot text-4xl text-[#6F42C1] mb-2"></i>
-                  <span class="text-sm font-semibold text-[#1f2937]">الذكاء الاصطناعي</span>
+                <div class="rounded-xl bg-[#E9D5FF] dark:bg-[#3B0764] p-4 flex flex-col items-center justify-center text-center min-h-[100px] transition-colors duration-300">
+                  <i class="fas fa-robot text-4xl text-[#6F42C1] dark:text-[#A78BFA] mb-2"></i>
+                  <span class="text-sm font-semibold text-[#1f2937] dark:text-[#F1F5F9]">الذكاء الاصطناعي</span>
                 </div>
-                <div class="rounded-xl bg-[#DBEAFE] p-4 flex flex-col items-center justify-center text-center min-h-[100px] relative">
+                <div class="rounded-xl bg-[#DBEAFE] dark:bg-[#1E3A8A] p-4 flex flex-col items-center justify-center text-center min-h-[100px] relative transition-colors duration-300">
                   <!-- لوجو بايثون يخرج من الزاوية مثل الـ W -->
-                  <div class="absolute -bottom-2 -left-2 w-12 h-12 rounded-full bg-white border-2 border-[#E5E7EB] shadow flex items-center justify-center">
-                    <i class="fab fa-python text-2xl text-[#3776AB]"></i>
+                  <div class="absolute -bottom-2 -left-2 w-12 h-12 rounded-full bg-white border-2 border-[#E5E7EB] shadow flex items-center justify-center dark:bg-[#1E293B] dark:border-[#334155]">
+                    <i class="fab fa-python text-2xl text-[#3776AB] dark:text-[#93C5FD]"></i>
                   </div>
-                  <i class="fas fa-brain text-4xl text-[#2563EB] mb-2"></i>
-                  <span class="text-sm font-semibold text-[#1f2937]">نماذج اللغة</span>
+                  <i class="fas fa-brain text-4xl text-[#2563EB] dark:text-[#60A5FA] mb-2"></i>
+                  <span class="text-sm font-semibold text-[#1f2937] dark:text-[#F1F5F9]">نماذج اللغة</span>
                 </div>
-                <div class="rounded-xl bg-[#D1FAE5] p-4 flex flex-col items-center justify-center text-center min-h-[100px]">
-                  <i class="fas fa-laptop-code text-4xl text-[#059669] mb-2"></i>
-                  <span class="text-sm font-semibold text-[#1f2937]">مشاريع تطبيقية</span>
+                <div class="rounded-xl bg-[#D1FAE5] dark:bg-[#064E3B] p-4 flex flex-col items-center justify-center text-center min-h-[100px] transition-colors duration-300">
+                  <i class="fas fa-laptop-code text-4xl text-[#059669] dark:text-[#34D399] mb-2"></i>
+                  <span class="text-sm font-semibold text-[#1f2937] dark:text-[#F1F5F9]">مشاريع تطبيقية</span>
                 </div>
               </div>
             </div>
           </div>
           <!-- النص والأزرار -->
           <div class="relative flex-1 order-1 lg:order-1 text-center lg:text-right wow animate__animated animate__fadeInRight">
-            <span class="inline-block px-4 py-1.5 mb-5 text-sm font-medium text-[#6F42C1] bg-[#6F42C1]/15 rounded-full">🚀 ابدأ رحلتك في هندسة الذكاء الاصطناعي</span>
-            <h1 style="line-height: 1.5" class="text-4xl md:text-5xl font-extrabold leading-normal tracking-tight mb-4">تعلم البرمجة والذكاء الاصطناعي من الصفر حتى بناء تطبيقات AI</h1>
-            <p class="text-lg text-[#6B7280] max-w-xl mb-8 mx-auto lg:mr-0 lg:ml-auto">ابدأ من الصفر وتعلّم أساسيات البرمجة والذكاء الاصطناعي معًا. اكتشف كيف تعمل نماذج اللغة الحديثة، وكيف يستخدم المطورون الأدوات والتقنيات لبناء تطبيقات AI حقيقية.</p>
+            <span class="inline-block px-4 py-1.5 mb-5 text-sm font-medium text-[#6F42C1] bg-[#6F42C1]/15 dark:text-[#A78BFA] dark:bg-[#6F42C1]/25 rounded-full transition-colors duration-300">🚀 ابدأ رحلتك في هندسة الذكاء الاصطناعي</span>
+            <h1 style="line-height: 1.5" class="text-4xl md:text-5xl font-extrabold leading-normal tracking-tight mb-4 dark:text-[#F1F5F9]">تعلم البرمجة والذكاء الاصطناعي من الصفر حتى بناء تطبيقات AI</h1>
+            <p class="text-lg text-[#6B7280] dark:text-[#94A3B8] max-w-xl mb-8 mx-auto lg:mr-0 lg:ml-auto transition-colors duration-300">ابدأ من الصفر وتعلّم أساسيات البرمجة والذكاء الاصطناعي معًا. اكتشف كيف تعمل نماذج اللغة الحديثة، وكيف يستخدم المطورون الأدوات والتقنيات لبناء تطبيقات AI حقيقية.</p>
             <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <a href="#pricing" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white bg-[#6F42C1] hover:bg-[#5B3A9E] transition">احجز مقعدك</a>
-              <a href="#curriculum" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold border border-[#E5E7EB] hover:bg-[#F8F3FC] transition">شاهد المنهج</a>
+              <a href="#pricing" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white bg-[#6F42C1] hover:bg-[#5B3A9E] dark:bg-[#8B5CF6] dark:hover:bg-[#7C3AED] transition">احجز مقعدك</a>
+              <a href="#curriculum" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold border border-[#E5E7EB] hover:bg-[#F8F3FC] dark:border-[#334155] dark:hover:bg-[#1E293B] transition">شاهد المنهج</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- رؤى السوق / إحصائيات الذكاء الاصطناعي -->
-      <section id="market-insights" class="py-16 md:py-20 bg-white">
+      <section id="market-insights" class="py-16 md:py-20 bg-white dark:bg-[#0F172A] transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-5 text-center">
           <div class="wow animate__animated animate__fadeInUp mb-12">
-            <p class="text-sm font-semibold uppercase tracking-wider text-[#6F42C1] mb-2">رؤى السوق</p>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1f2937] mb-3">الذكاء الاصطناعي يقود مستقبل التكنولوجيا</h2>
-            <p class="text-[#6B7280] max-w-2xl mx-auto">مع التطور السريع لنماذج اللغة والأنظمة الذكية، أصبح فهم الذكاء الاصطناعي وبناء تطبيقاته من أهم المهارات التي يبحث عنها سوق العمل اليوم.</p>
+            <p class="text-sm font-semibold uppercase tracking-wider text-[#6F42C1] dark:text-[#A78BFA] mb-2">رؤى السوق</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-3">الذكاء الاصطناعي يقود مستقبل التكنولوجيا</h2>
+            <p class="text-[#6B7280] dark:text-[#94A3B8] max-w-2xl mx-auto">مع التطور السريع لنماذج اللغة والأنظمة الذكية، أصبح فهم الذكاء الاصطناعي وبناء تطبيقاته من أهم المهارات التي يبحث عنها سوق العمل اليوم.</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div class="p-6 rounded-2xl bg-[#F9FAFB] border border-[#E5E7EB] text-center wow animate__animated animate__fadeInRight">
-              <div class="w-14 h-14 rounded-full bg-[#FEF3C7] flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-coins text-2xl text-[#D97706]"></i>
+            <div class="p-6 rounded-2xl bg-[#F9FAFB] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] text-center wow animate__animated animate__fadeInRight transition-colors duration-300">
+              <div class="w-14 h-14 rounded-full bg-[#FEF3C7] dark:bg-[#422006] flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-coins text-2xl text-[#D97706] dark:text-[#FBBF24]"></i>
               </div>
-              <p class="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-2"><span class="inline">$</span><span id="counter1" class="inline-block" data-target="15">0</span><span class="inline">B+</span></p>
-              <p class="text-sm text-[#6B7280]">حجم الاستثمار العالمي في تقنيات الذكاء الاصطناعي سنويًا.</p>
+              <p class="text-3xl md:text-4xl font-extrabold text-[#1f2937] dark:text-[#F1F5F9] mb-2"><span class="inline">$</span><span id="counter1" class="inline-block" data-target="15">0</span><span class="inline">B+</span></p>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">حجم الاستثمار العالمي في تقنيات الذكاء الاصطناعي سنويًا.</p>
             </div>
-            <div class="p-6 rounded-2xl bg-[#F9FAFB] border border-[#E5E7EB] text-center wow animate__animated animate__fadeInUp">
-              <div class="w-14 h-14 rounded-full bg-[#D1FAE5] flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-chart-line text-2xl text-[#059669]"></i>
+            <div class="p-6 rounded-2xl bg-[#F9FAFB] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] text-center wow animate__animated animate__fadeInUp transition-colors duration-300">
+              <div class="w-14 h-14 rounded-full bg-[#D1FAE5] dark:bg-[#064E3B] flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-chart-line text-2xl text-[#059669] dark:text-[#34D399]"></i>
               </div>
-              <p class="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-2"><span id="counter2" class="inline-block" data-target="75">0</span><span class="inline">%</span></p>
-              <p class="text-sm text-[#6B7280]">من الشركات تستخدم أو تخطط لاستخدام الذكاء الاصطناعي في أعمالها.</p>
+              <p class="text-3xl md:text-4xl font-extrabold text-[#1f2937] dark:text-[#F1F5F9] mb-2"><span id="counter2" class="inline-block" data-target="75">0</span><span class="inline">%</span></p>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">من الشركات تستخدم أو تخطط لاستخدام الذكاء الاصطناعي في أعمالها.</p>
             </div>
-            <div class="p-6 rounded-2xl bg-[#F9FAFB] border border-[#E5E7EB] text-center wow animate__animated animate__fadeInRight">
-              <div class="w-14 h-14 rounded-full bg-[#DBEAFE] flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-globe text-2xl text-[#2563EB]"></i>
+            <div class="p-6 rounded-2xl bg-[#F9FAFB] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] text-center wow animate__animated animate__fadeInRight transition-colors duration-300">
+              <div class="w-14 h-14 rounded-full bg-[#DBEAFE] dark:bg-[#1E3A8A] flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-globe text-2xl text-[#2563EB] dark:text-[#60A5FA]"></i>
               </div>
-              <p class="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-2"><span id="counter3" class="inline-block" data-target="10">0</span><span class="inline">×</span></p>
-              <p class="text-sm text-[#6B7280]">نمو في الطلب على مطوري تطبيقات الذكاء الاصطناعي خلال السنوات الأخيرة.</p>
+              <p class="text-3xl md:text-4xl font-extrabold text-[#1f2937] dark:text-[#F1F5F9] mb-2"><span id="counter3" class="inline-block" data-target="10">0</span><span class="inline">×</span></p>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">نمو في الطلب على مطوري تطبيقات الذكاء الاصطناعي خلال السنوات الأخيرة.</p>
             </div>
           </div>
         </div>
@@ -339,96 +340,96 @@
       </section> -->
 
       <!-- Learning Outcomes / What you will learn -->
-      <section id="outcomes" class="py-16 md:py-20 bg-[#F8F9FE]" aria-labelledby="learning-outcomes-heading">
+      <section id="outcomes" class="py-16 md:py-20 bg-[#F8F9FE] dark:bg-[#0F172A] transition-colors duration-300" aria-labelledby="learning-outcomes-heading">
         <div class="max-w-5xl mx-auto px-5">
           <header class="text-center mb-12 wow animate__animated animate__fadeInRight">
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#6F42C1] mb-3">Learning Outcomes</p>
-            <h2 id="learning-outcomes-heading" class="text-2xl md:text-3xl font-bold tracking-tight text-[#1f2937] mb-4">ماذا ستتعلم في هذا الكورس؟</h2>
-            <p class="text-[#6B7280] max-w-2xl mx-auto text-base leading-relaxed">يتناول الكورس أساسيات البرمجة وأساسيات الذكاء الاصطناعي معًا؛ من كتابة أول سطر كود إلى ربط التطبيقات بنماذج اللغة وبناء مشاريع عملية.</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#6F42C1] dark:text-[#A78BFA] mb-3">Learning Outcomes</p>
+            <h2 id="learning-outcomes-heading" class="text-2xl md:text-3xl font-bold tracking-tight text-[#1f2937] dark:text-[#F1F5F9] mb-4">ماذا ستتعلم في هذا الكورس؟</h2>
+            <p class="text-[#6B7280] dark:text-[#94A3B8] max-w-2xl mx-auto text-base leading-relaxed">يتناول الكورس أساسيات البرمجة وأساسيات الذكاء الاصطناعي معًا؛ من كتابة أول سطر كود إلى ربط التطبيقات بنماذج اللغة وبناء مشاريع عملية.</p>
           </header>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInUp">
-              <div class="w-12 h-12 rounded-xl bg-[#DBEAFE] flex items-center justify-center mb-4 group-hover:bg-[#BFDBFE] transition-colors">
-                <i class="fas fa-code text-xl text-[#2563EB]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInUp">
+              <div class="w-12 h-12 rounded-xl bg-[#DBEAFE] flex items-center justify-center mb-4 group-hover:bg-[#BFDBFE] dark:bg-[#1E3A8A] dark:group-hover:bg-[#1E40AF] transition-colors">
+                <i class="fas fa-code text-xl text-[#2563EB] dark:text-[#60A5FA]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">أساسيات البرمجة</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">فهم المفاهيم الأساسية للبرمجة وتعلم طريقة التفكير البرمجي وكتابة الكود بشكل صحيح.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">أساسيات البرمجة</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">فهم المفاهيم الأساسية للبرمجة وتعلم طريقة التفكير البرمجي وكتابة الكود بشكل صحيح.</p>
             </article>
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInRight">
-              <div class="w-12 h-12 rounded-xl bg-[#E9D5FF] flex items-center justify-center mb-4 group-hover:bg-[#DDD6FE] transition-colors">
-                <i class="fas fa-brain text-xl text-[#6F42C1]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInRight">
+              <div class="w-12 h-12 rounded-xl bg-[#E9D5FF] flex items-center justify-center mb-4 group-hover:bg-[#DDD6FE] dark:bg-[#3B0764] dark:group-hover:bg-[#4C1D95] transition-colors">
+                <i class="fas fa-brain text-xl text-[#6F42C1] dark:text-[#A78BFA]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">مقدمة الذكاء الاصطناعي</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">فهم ما هو الذكاء الاصطناعي وكيف يتم استخدامه في بناء المنتجات الحديثة.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">مقدمة الذكاء الاصطناعي</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">فهم ما هو الذكاء الاصطناعي وكيف يتم استخدامه في بناء المنتجات الحديثة.</p>
             </article>
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInUp">
-              <div class="w-12 h-12 rounded-xl bg-[#D1FAE5] flex items-center justify-center mb-4 group-hover:bg-[#A7F3D0] transition-colors">
-                <i class="fas fa-robot text-xl text-[#059669]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInUp">
+              <div class="w-12 h-12 rounded-xl bg-[#D1FAE5] flex items-center justify-center mb-4 group-hover:bg-[#A7F3D0] dark:bg-[#064E3B] dark:group-hover:bg-[#065F46] transition-colors">
+                <i class="fas fa-robot text-xl text-[#059669] dark:text-[#34D399]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">نماذج اللغة (LLMs)</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">التعرف على كيفية عمل نماذج اللغة الحديثة وكيف يمكن استخدامها في التطبيقات.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">نماذج اللغة (LLMs)</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">التعرف على كيفية عمل نماذج اللغة الحديثة وكيف يمكن استخدامها في التطبيقات.</p>
             </article>
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInRight">
-              <div class="w-12 h-12 rounded-xl bg-[#FEF3C7] flex items-center justify-center mb-4 group-hover:bg-[#FDE68A] transition-colors">
-                <i class="fas fa-plug text-xl text-[#D97706]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInRight">
+              <div class="w-12 h-12 rounded-xl bg-[#FEF3C7] flex items-center justify-center mb-4 group-hover:bg-[#FDE68A] dark:bg-[#422006] dark:group-hover:bg-[#78350F] transition-colors">
+                <i class="fas fa-plug text-xl text-[#D97706] dark:text-[#FBBF24]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">واجهات API</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">تعلم كيفية استخدام APIs وربط التطبيقات بنماذج الذكاء الاصطناعي.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">واجهات API</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">تعلم كيفية استخدام APIs وربط التطبيقات بنماذج الذكاء الاصطناعي.</p>
             </article>
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInUp">
-              <div class="w-12 h-12 rounded-xl bg-[#E0E7FF] flex items-center justify-center mb-4 group-hover:bg-[#C7D2FE] transition-colors">
-                <i class="fas fa-terminal text-xl text-[#4F46E5]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInUp">
+              <div class="w-12 h-12 rounded-xl bg-[#E0E7FF] flex items-center justify-center mb-4 group-hover:bg-[#C7D2FE] dark:bg-[#312E81] dark:group-hover:bg-[#3730A3] transition-colors">
+                <i class="fas fa-terminal text-xl text-[#4F46E5] dark:text-[#818CF8]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">أدوات المطورين</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">استخدام أدوات التطوير الحديثة مثل VS Code وبيئات العمل الاحترافية.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">أدوات المطورين</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">استخدام أدوات التطوير الحديثة مثل VS Code وبيئات العمل الاحترافية.</p>
             </article>
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInRight">
-              <div class="w-12 h-12 rounded-xl bg-[#FCE7F3] flex items-center justify-center mb-4 group-hover:bg-[#FBCFE8] transition-colors">
-                <i class="fas fa-lightbulb text-xl text-[#BE185D]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInRight">
+              <div class="w-12 h-12 rounded-xl bg-[#FCE7F3] flex items-center justify-center mb-4 group-hover:bg-[#FBCFE8] dark:bg-[#831843] dark:group-hover:bg-[#9D174D] transition-colors">
+                <i class="fas fa-lightbulb text-xl text-[#BE185D] dark:text-[#F472B6]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">بناء مشاريع حقيقية</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">تطبيق ما تعلمته من خلال مشاريع عملية باستخدام تقنيات الذكاء الاصطناعي.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">بناء مشاريع حقيقية</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">تطبيق ما تعلمته من خلال مشاريع عملية باستخدام تقنيات الذكاء الاصطناعي.</p>
             </article>
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInUp">
-              <div class="w-12 h-12 rounded-xl bg-[#E9D5FF] flex items-center justify-center mb-4 group-hover:bg-[#DDD6FE] transition-colors">
-                <i class="fas fa-wand-magic-sparkles text-xl text-[#6F42C1]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInUp">
+              <div class="w-12 h-12 rounded-xl bg-[#E9D5FF] flex items-center justify-center mb-4 group-hover:bg-[#DDD6FE] dark:bg-[#3B0764] dark:group-hover:bg-[#4C1D95] transition-colors">
+                <i class="fas fa-wand-magic-sparkles text-xl text-[#6F42C1] dark:text-[#A78BFA]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">Vibe Coding</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">تمكن من إنشاء مواقع إلكترونية وصفحات هبوط لبيع المنتجات باستخدام الذكاء الاصطناعي، دون الحاجة لتعلم البرمجة أو كتابة سطر كود واحد.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">Vibe Coding</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">تمكن من إنشاء مواقع إلكترونية وصفحات هبوط لبيع المنتجات باستخدام الذكاء الاصطناعي، دون الحاجة لتعلم البرمجة أو كتابة سطر كود واحد.</p>
             </article>
-            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 wow animate__animated animate__fadeInRight">
-              <div class="w-12 h-12 rounded-xl bg-[#DBEAFE] flex items-center justify-center mb-4 group-hover:bg-[#BFDBFE] transition-colors">
-                <i class="fas fa-brain text-xl text-[#2563EB]" aria-hidden="true"></i>
+            <article class="group p-5 md:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 dark:bg-[#1E293B] dark:border-[#334155] wow animate__animated animate__fadeInRight">
+              <div class="w-12 h-12 rounded-xl bg-[#DBEAFE] flex items-center justify-center mb-4 group-hover:bg-[#BFDBFE] dark:bg-[#1E3A8A] dark:group-hover:bg-[#1E40AF] transition-colors">
+                <i class="fas fa-brain text-xl text-[#2563EB] dark:text-[#60A5FA]" aria-hidden="true"></i>
               </div>
-              <h3 class="font-semibold text-[#1f2937] mb-2 text-lg">Prompt Engineering</h3>
-              <p class="text-sm text-[#6B7280] leading-relaxed">تعلم كيفية كتابة Prompts احترافية للتعامل مع نماذج الذكاء الاصطناعي والحصول على أفضل النتائج.</p>
+              <h3 class="font-semibold text-[#1f2937] dark:text-[#F1F5F9] mb-2 text-lg">Prompt Engineering</h3>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">تعلم كيفية كتابة Prompts احترافية للتعامل مع نماذج الذكاء الاصطناعي والحصول على أفضل النتائج.</p>
             </article>
           </div>
         </div>
       </section>
 
       <!-- Curriculum Accordion -->
-      <section id="curriculum" class="py-16 md:py-20 bg-[#F8F3FC]">
+      <section id="curriculum" class="py-16 md:py-20 bg-[#F8F3FC] dark:bg-[#0F172A] transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-5">
           <div class="wow animate__animated animate__fadeInUp mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">المنهج الكامل</h2>
-            <p class="text-[#6B7280]">٢٠ محاضرة: من مقدمة الكورس إلى Python و APIs و LLMs و Prompt Engineering وانتهاءً بمشاريع تطبيقية.</p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 dark:text-[#F1F5F9]">المنهج الكامل</h2>
+            <p class="text-[#6B7280] dark:text-[#94A3B8]">٢٠ محاضرة: من مقدمة الكورس إلى Python و APIs و LLMs و Prompt Engineering وانتهاءً بمشاريع تطبيقية.</p>
           </div>
           <div id="curriculum-accordion" class="space-y-3 wow animate__animated animate__fadeInRight" role="list">
             <!-- Session 1 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-1" id="curriculum-heading-1" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">1</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-1" id="curriculum-heading-1" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">1</span>
                   <span class="flex-1 font-semibold"> مقدمة الكورس</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-1" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-1" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>مقدمة Programming والتفكير البرمجي</li>
                     <li>مقدمة الذكاء الاصطناعي وتطبيقاته</li>
                     <li>مسارات العمل في مجال AI</li>
@@ -438,19 +439,19 @@
               </div>
             </div>
             <!-- Session 2 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-2" id="curriculum-heading-2" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">2</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-2" id="curriculum-heading-2" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">2</span>
                   <span class="flex-1 font-semibold"> إعداد بيئة التطوير (Setup)</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-2" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-2" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>تثبيت بيئة التطوير: VS Code أو Antigravity، Python 3.14، UV، وإضافات IDE</li>
                     <li>تشغيل أول script</li>
                     <li>استخدام الـ Terminal والأوامر الأساسية</li>
@@ -459,19 +460,19 @@
               </div>
             </div>
             <!-- Session 3 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-3" id="curriculum-heading-3" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">3</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-3" id="curriculum-heading-3" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">3</span>
                   <span class="flex-1 font-semibold"> Python Basics</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-3" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-3" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>Variables وتسمية المتغيرات (naming)</li>
                     <li>Data types: int, float, str, bool</li>
                     <li>Type conversion والـ casting</li>
@@ -483,19 +484,19 @@
               </div>
             </div>
             <!-- Session 4 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-4" id="curriculum-heading-4" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">4</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-4" id="curriculum-heading-4" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">4</span>
                   <span class="flex-1 font-semibold"> Control Flow — الشروط</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-4" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-4" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>Booleans والقيم المنطقية</li>
                     <li>جمل if / elif / else</li>
                     <li>Comparison operators: ==, !=, &lt;, &gt;</li>
@@ -507,19 +508,19 @@
               </div>
             </div>
             <!-- Session 5 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-5" id="curriculum-heading-5" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">5</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-5" id="curriculum-heading-5" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">5</span>
                   <span class="flex-1 font-semibold"> Loops — الحلقات</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-5" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-5" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>for loop و range()</li>
                     <li>while loop</li>
                     <li>break و continue</li>
@@ -529,19 +530,19 @@
               </div>
             </div>
             <!-- Session 6 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-6" id="curriculum-heading-6" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">6</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-6" id="curriculum-heading-6" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">6</span>
                   <span class="flex-1 font-semibold"> Lists &amp; Tuples</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-6" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-6" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>إنشاء الـ lists والفهرسة (indexing)</li>
                     <li>List methods: append, extend, pop, remove</li>
                     <li>Slicing وتقطيع القوائم</li>
@@ -553,19 +554,19 @@
               </div>
             </div>
             <!-- Session 7 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-7" id="curriculum-heading-7" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">7</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-7" id="curriculum-heading-7" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">7</span>
                   <span class="flex-1 font-semibold"> Dictionaries</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-7" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-7" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>إنشاء الـ dictionaries (key-value pairs)</li>
                     <li>الوصول إلى القيم وتعديلها</li>
                     <li>Methods: keys, values, items, get</li>
@@ -576,19 +577,19 @@
               </div>
             </div>
             <!-- Session 8 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-8" id="curriculum-heading-8" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">8</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-8" id="curriculum-heading-8" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">8</span>
                   <span class="flex-1 font-semibold">File I/O &amp; JSON</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-8" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-8" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>فتح وإغلاق الملفات (file handling)</li>
                     <li>قراءة الملفات: read, readline, readlines</li>
                     <li>الكتابة إلى الملفات</li>
@@ -600,19 +601,19 @@
               </div>
             </div>
             <!-- Session 9 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-9" id="curriculum-heading-9" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">9</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-9" id="curriculum-heading-9" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">9</span>
                   <span class="flex-1 font-semibold">Exceptions + مقدمة OOP</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-9" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-9" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>try / except / finally ومعالجة الأخطاء</li>
                     <li>Debugging وأفضل الممارسات</li>
                     <li>Classes و Objects</li>
@@ -623,19 +624,19 @@
               </div>
             </div>
             <!-- Session 10 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-10" id="curriculum-heading-10" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">10</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-10" id="curriculum-heading-10" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">10</span>
                   <span class="flex-1 font-semibold">Object-Oriented Programming</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-10" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-10" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>Static methods و class methods</li>
                     <li>Getters و Setters و properties</li>
                     <li>Inheritance (الوراثة)</li>
@@ -645,19 +646,19 @@
               </div>
             </div>
             <!-- Session 11 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-11" id="curriculum-heading-11" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">11</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-11" id="curriculum-heading-11" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">11</span>
                   <span class="flex-1 font-semibold">Python Environment</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-11" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-11" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>Virtual environments وما فائدتها</li>
                     <li>إدارة البيئات بـ UV</li>
                     <li>تثبيت الـ packages (pip / uv)</li>
@@ -667,19 +668,19 @@
               </div>
             </div>
             <!-- Session 12 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-12" id="curriculum-heading-12" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">12</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-12" id="curriculum-heading-12" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">12</span>
                   <span class="flex-1 font-semibold"> مقدمة APIs</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-12" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-12" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>ما هي الـ APIs وكيف تعمل</li>
                     <li>HTTP methods: GET, POST</li>
                     <li>Status codes والاستجابة</li>
@@ -692,19 +693,19 @@
               </div>
             </div>
             <!-- Session 13 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-13" id="curriculum-heading-13" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">13</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-13" id="curriculum-heading-13" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">13</span>
                   <span class="flex-1 font-semibold">مقدمة LLMs</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-13" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-13" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>ما هو الـ LLM وكيف يُستخدم</li>
                     <li>مقدمو الخدمات: OpenAI، Anthropic، وغيرهم</li>
                     <li>Tokens: الإدخال والإخراج والتكلفة</li>
@@ -716,19 +717,19 @@
               </div>
             </div>
             <!-- Session 14 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-14" id="curriculum-heading-14" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">14</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-14" id="curriculum-heading-14" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">14</span>
                   <span class="flex-1 font-semibold">Prompt Engineering</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-14" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-14" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>كتابة تعليمات واضحة وفعّالة</li>
                     <li>System prompts وتحديد سلوك النموذج</li>
                     <li>Few-shot learning بالأمثلة</li>
@@ -740,19 +741,19 @@
               </div>
             </div>
             <!-- Session 15 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-15" id="curriculum-heading-15" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">15</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-15" id="curriculum-heading-15" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">15</span>
                   <span class="flex-1 font-semibold">Building with LLMs</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-15" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-15" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>Text generation وتطبيقاته</li>
                     <li>Summarization و classification</li>
                     <li>استخراج البيانات (extraction)</li>
@@ -765,19 +766,19 @@
               </div>
             </div>
             <!-- Session 16 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-16" id="curriculum-heading-16" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">16</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-16" id="curriculum-heading-16" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">16</span>
                   <span class="flex-1 font-semibold">LLM Stack &amp; RAG</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-16" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-16" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>مكدس تطبيقات LLM: LangChain، pydantic، Streamlit، FastAPI</li>
                     <li>معمارية التطبيق: UI → API → LLM → Database</li>
                     <li>Embeddings واستخدامها</li>
@@ -789,19 +790,19 @@
               </div>
             </div>
             <!-- Session 17 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-17" id="curriculum-heading-17" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">17</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-17" id="curriculum-heading-17" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">17</span>
                   <span class="flex-1 font-semibold">AI-Assisted Coding</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-17" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-17" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>نظرة عامة على البرمجة بمساعدة AI</li>
                     <li>Cursor، GitHub Copilot، Claude Code</li>
                     <li>كتابة prompts للكود بشكل فعّال</li>
@@ -812,19 +813,19 @@
               </div>
             </div>
             <!-- Session 18 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-18" id="curriculum-heading-18" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">18</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-18" id="curriculum-heading-18" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">18</span>
                   <span class="flex-1 font-semibold">Git &amp; GitHub</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-18" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-18" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>لماذا Version control أساسي في العمل الاحترافي</li>
                     <li>تثبيت وإعداد Git</li>
                     <li>GitHub: المستودعات والتعاون</li>
@@ -834,36 +835,36 @@
               </div>
             </div>
             <!-- Session 19 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-19" id="curriculum-heading-19" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">19</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-19" id="curriculum-heading-19" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">19</span>
                   <span class="flex-1 font-semibold">Capstone Project</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-19" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-19" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">مشروع تطبيقي يجمع Python و APIs و LLMs.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">مشروع تطبيقي يجمع Python و APIs و LLMs.</p>
                 </div>
               </div>
             </div>
             <!-- Session 20 -->
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-20" id="curriculum-heading-20" data-accordion-trigger>
-                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] rounded-full">20</span>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="curriculum-panel-20" id="curriculum-heading-20" data-accordion-trigger>
+                  <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center text-sm font-bold text-white bg-[#6F42C1] dark:bg-[#8B5CF6] rounded-full">20</span>
                   <span class="flex-1 font-semibold">Capstone Project</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </button>
               </h3>
               <div id="curriculum-panel-20" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="curriculum-heading-20" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">إكمال المشروع وعرضه وتقديم التغذية الراجعة.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">إكمال المشروع وتقديم Feedback لكل طالب ومناقشة ماذا بعد الكورس</p>
                 </div>
               </div>
             </div>
@@ -872,41 +873,41 @@
       </section>
 
       <!-- Pricing -->
-      <section id="pricing" class="pricing-section-bg py-16 md:py-24 relative">
+      <section id="pricing" class="pricing-section-bg py-16 md:py-24 relative transition-colors duration-300">
         <div class="max-w-lg mx-auto px-5 relative">
           <!-- Floating red badge -->
           <div class="flex justify-center mb-[-14px] relative z-10 wow animate__animated animate__fadeInUp">
-            <span class="inline-block px-5 py-2 rounded-full bg-[#DC2626] text-white text-sm font-bold shadow-md">خصم حصري 50% لفترة محدودة</span>
+            <span class="inline-block px-5 py-2 rounded-full bg-[#DC2626] text-white text-sm font-bold shadow-md dark:bg-[#EF4444]">خصم حصري 50% لفترة محدودة</span>
           </div>
           <!-- Pricing card -->
-          <div class="rounded-3xl bg-[#FAFAF9] border-2 border-[#EAB308] shadow-xl overflow-hidden text-right wow animate__animated animate__fadeInRight">
+          <div class="rounded-3xl bg-[#FAFAF9] border-2 border-[#EAB308] shadow-xl overflow-hidden text-right wow animate__animated animate__fadeInRight dark:bg-[#1E293B] dark:border-[#F59E0B] dark:shadow-xl dark:shadow-black/30 transition-colors duration-300">
             <div class="p-6 md:p-8">
               <!-- Price section -->
-              <p class="text-[#6B7280] text-sm mb-2">استثمارك في مستقبلك</p>
+              <p class="text-[#6B7280] dark:text-[#94A3B8] text-sm mb-2">استثمارك في مستقبلك</p>
               <div class="flex flex-wrap items-center gap-2 gap-y-1 mb-2">
-                <span class="text-[#9CA3AF] line-through text-lg">EGP 7000</span>
-                <span class="text-[#9CA3AF]" aria-hidden="true">
+                <span class="text-[#9CA3AF] dark:text-[#64748B] line-through text-lg">EGP 7000</span>
+                <span class="text-[#9CA3AF] dark:text-[#64748B]" aria-hidden="true">
                   <i class="fas fa-arrow-left text-sm"></i>
                 </span>
-                <span class="text-3xl md:text-4xl font-extrabold text-[#6F42C1]">EGP 3500</span>
+                <span class="text-3xl md:text-4xl font-extrabold text-[#6F42C1] dark:text-[#A78BFA]">EGP 3500</span>
               </div>
               <div class="mb-6">
-                <span class="inline-block px-3 py-1 rounded-full bg-[#16A34A] text-white text-xs font-semibold">وفر 3500 جنيه عند الحجز المبكر</span>
+                <span class="inline-block px-3 py-1 rounded-full bg-[#16A34A] text-white text-xs font-semibold dark:bg-[#059669]">وفر 3500 جنيه عند الحجز المبكر</span>
               </div>
               <!-- Divider -->
-              <hr class="border-[#E5E7EB] mb-6" />
+              <hr class="border-[#E5E7EB] dark:border-[#334155] mb-6" />
               <!-- Features list -->
-              <ul class="text-[#4B5563] text-sm space-y-3 mb-6">
+              <ul class="text-[#4B5563] dark:text-[#94A3B8] text-sm space-y-3 mb-6">
                 <li class="flex items-center gap-3 justify-start">
-                  <span class="text-[#16A34A]"><i class="fas fa-circle-check" aria-hidden="true"></i></span>
+                  <span class="text-[#16A34A] dark:text-[#34D399]"><i class="fas fa-circle-check" aria-hidden="true"></i></span>
                   تدريب عملي مكثف من الصفر
                 </li>
                 <li class="flex items-center gap-3 justify-start">
-                  <span class="text-[#16A34A]"><i class="fas fa-circle-check" aria-hidden="true"></i></span>
+                  <span class="text-[#16A34A] dark:text-[#34D399]"><i class="fas fa-circle-check" aria-hidden="true"></i></span>
                   شهادة معتمدة من النقابة
                 </li>
                 <li class="flex items-center gap-3 justify-start">
-                  <span class="text-[#16A34A]"><i class="fas fa-circle-check" aria-hidden="true"></i></span>
+                  <span class="text-[#16A34A] dark:text-[#34D399]"><i class="fas fa-circle-check" aria-hidden="true"></i></span>
                   متابعة ودعم مدى الحياة
                 </li>
                 <!-- <li class="flex items-center gap-3 justify-start">
@@ -919,16 +920,16 @@
                 </li> -->
               </ul>
               <!-- Schedule box -->
-              <div class="rounded-xl bg-[#F3F4F6] p-4 mb-6 space-y-3">
+              <div class="rounded-xl bg-[#F3F4F6] dark:bg-[#334155] p-4 mb-6 space-y-3 transition-colors duration-300">
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex items-start gap-2 justify-start flex-1">
-                    <span class="text-[#6B7280] mt-0.5"><i class="fas fa-clock" aria-hidden="true"></i></span>
+                    <span class="text-[#6B7280] dark:text-[#94A3B8] mt-0.5"><i class="fas fa-clock" aria-hidden="true"></i></span>
                     <div>
-                      <p class="text-[#6B7280] text-xs mb-0.5">المواعيد:</p>
-                      <p class="text-[#374151] text-sm font-medium">الأثنين والخميس</p>
+                      <p class="text-[#6B7280] dark:text-[#94A3B8] text-xs mb-0.5">المواعيد:</p>
+                      <p class="text-[#374151] dark:text-[#F1F5F9] text-sm font-medium">الأثنين والخميس</p>
                     </div>
                   </div>
-                  <p class="text-[#374151] text-sm font-medium shrink-0">7:00 م - 10:00 م</p>
+                  <p class="text-[#374151] dark:text-[#F1F5F9] text-sm font-medium shrink-0">7:00 م - 10:00 م</p>
                 </div>
                 <!-- <div class="flex items-start gap-2 justify-start">
                   <span class="text-[#6B7280] mt-0.5"><i class="fas fa-calendar-alt" aria-hidden="true"></i></span>
@@ -943,54 +944,54 @@
                 <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
                 احجز مكانك الآن عبر واتساب
               </a>
-              <p class="text-center text-[#9CA3AF] text-xs mt-3">الأماكن محدودة جداً</p>
+              <p class="text-center text-[#9CA3AF] dark:text-[#94A3B8] text-xs mt-3">الأماكن محدودة جداً</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- مزايا إضافية (EraaSoft Extras) -->
-      <section class="py-16 md:py-20 bg-white">
+      <section class="py-16 md:py-20 bg-white dark:bg-[#0F172A] transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-5">
           <header class="text-center mb-12 wow animate__animated animate__fadeInUp">
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[#1f2937] mb-3">مزايا إضافية (EraaSoft Extras)</h2>
-            <p class="text-[#6B7280] max-w-2xl mx-auto">نحن نقدم بيئة متكاملة تضمن لك الانتقال من مرحلة التعلم إلى مرحلة الاحتراف.</p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[#1f2937] dark:text-[#F1F5F9] mb-3">مزايا إضافية (EraaSoft Extras)</h2>
+            <p class="text-[#6B7280] dark:text-[#94A3B8] max-w-2xl mx-auto">نحن نقدم بيئة متكاملة تضمن لك الانتقال من مرحلة التعلم إلى مرحلة الاحتراف.</p>
           </header>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#EF4444] transition-all duration-200 border-t-4 border-t-[#EF4444] wow animate__animated animate__fadeInUp">
+            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#EF4444] transition-all duration-200 border-t-4 border-t-[#EF4444] dark:bg-[#1E293B] dark:border-[#334155] dark:hover:border-[#EF4444] wow animate__animated animate__fadeInUp">
               <div class="p-6 text-center">
                 <div class="flex justify-center mb-3">
-                  <i class="fas fa-fire text-3xl text-[#EF4444]" aria-hidden="true"></i>
+                  <i class="fas fa-fire text-3xl text-[#EF4444] dark:text-[#F87171]" aria-hidden="true"></i>
                 </div>
-                <h3 class="font-bold text-[#1f2937] mb-2">Camps</h3>
-                <p class="text-sm text-[#6B7280]">معسكرات تدريب مكثفة.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-2">Camps</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">معسكرات تدريب مكثفة.</p>
               </div>
             </article>
-            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#6F42C1] transition-all duration-200 border-t-4 border-t-[#6F42C1] wow animate__animated animate__fadeInRight">
+            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#6F42C1] transition-all duration-200 border-t-4 border-t-[#6F42C1] dark:bg-[#1E293B] dark:border-[#334155] dark:hover:border-[#8B5CF6] wow animate__animated animate__fadeInRight">
               <div class="p-6 text-center">
                 <div class="flex justify-center mb-3">
-                  <i class="fas fa-briefcase text-3xl text-[#6F42C1]" aria-hidden="true"></i>
+                  <i class="fas fa-briefcase text-3xl text-[#6F42C1] dark:text-[#A78BFA]" aria-hidden="true"></i>
                 </div>
-                <h3 class="font-bold text-[#1f2937] mb-2">Partners</h3>
-                <p class="text-sm text-[#6B7280]">شراكات توظيف وتدريب.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-2">Partners</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">شراكات توظيف وتدريب.</p>
               </div>
             </article>
-            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#2563EB] transition-all duration-200 border-t-4 border-t-[#2563EB] wow animate__animated animate__fadeInUp">
+            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#2563EB] transition-all duration-200 border-t-4 border-t-[#2563EB] dark:bg-[#1E293B] dark:border-[#334155] dark:hover:border-[#60A5FA] wow animate__animated animate__fadeInUp">
               <div class="p-6 text-center">
                 <div class="flex justify-center mb-3">
-                  <i class="fas fa-users text-3xl text-[#2563EB]" aria-hidden="true"></i>
+                  <i class="fas fa-users text-3xl text-[#2563EB] dark:text-[#60A5FA]" aria-hidden="true"></i>
                 </div>
-                <h3 class="font-bold text-[#1f2937] mb-2">Community</h3>
-                <p class="text-sm text-[#6B7280]">مجتمع تقني داعم.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-2">Community</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">مجتمع تقني داعم.</p>
               </div>
             </article>
-            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#EAB308] transition-all duration-200 border-t-4 border-t-[#EAB308] wow animate__animated animate__fadeInRight">
+            <article class="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden hover:shadow-md hover:border-[#EAB308] transition-all duration-200 border-t-4 border-t-[#EAB308] dark:bg-[#1E293B] dark:border-[#334155] dark:hover:border-[#FBBF24] wow animate__animated animate__fadeInRight">
               <div class="p-6 text-center">
                 <div class="flex justify-center mb-3">
-                  <i class="fas fa-medal text-3xl text-[#EAB308]" aria-hidden="true"></i>
+                  <i class="fas fa-medal text-3xl text-[#EAB308] dark:text-[#FBBF24]" aria-hidden="true"></i>
                 </div>
-                <h3 class="font-bold text-[#1f2937] mb-2">ProSeries</h3>
-                <p class="text-sm text-[#6B7280]">لقاءات متقدمة مع خبراء السوق.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-2">ProSeries</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">لقاءات متقدمة مع خبراء السوق.</p>
               </div>
             </article>
           </div>
@@ -998,50 +999,50 @@
       </section>
 
       <!-- مميزات حصرية للمشتركين -->
-      <section class="py-16 md:py-20 bg-[#F9FAFB]">
+      <section class="py-16 md:py-20 bg-[#F9FAFB] dark:bg-[#0F172A] transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-5">
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[#1f2937] text-center mb-12 wow animate__animated animate__fadeInUp">مميزات حصرية للمشتركين</h2>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[#1f2937] dark:text-[#F1F5F9] text-center mb-12 wow animate__animated animate__fadeInUp">مميزات حصرية للمشتركين</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] p-5 shadow-sm hover:shadow-md hover:bg-[#EEF2FF] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInRight">
-              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#6F42C1]"><i class="fas fa-right-left text-xl" aria-hidden="true"></i></span>
+            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] p-5 shadow-sm hover:shadow-md hover:bg-[#EEF2FF] dark:hover:bg-[#334155] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInRight">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#6F42C1] dark:text-[#A78BFA]"><i class="fas fa-right-left text-xl" aria-hidden="true"></i></span>
               <div class="flex-1 min-w-0 text-right">
-                <h3 class="font-bold text-[#1f2937] mb-1">حرية التنقل</h3>
-                <p class="text-sm text-[#6B7280]">تغيير الجروب أو المدرب.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-1">حرية التنقل</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">تغيير الجروب أو المدرب.</p>
               </div>
             </article>
-            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] p-5 shadow-sm hover:shadow-md hover:bg-[#ECFDF5] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInUp">
-              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#16A34A]"><i class="fas fa-calendar-check text-xl" aria-hidden="true"></i></span>
+            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] p-5 shadow-sm hover:shadow-md hover:bg-[#ECFDF5] dark:hover:bg-[#334155] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInUp">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#16A34A] dark:text-[#34D399]"><i class="fas fa-calendar-check text-xl" aria-hidden="true"></i></span>
               <div class="flex-1 min-w-0 text-right">
-                <h3 class="font-bold text-[#1f2937] mb-1">مرونة في التأجيل</h3>
-                <p class="text-sm text-[#6B7280]">إمكانية التأجيل بسهولة.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-1">مرونة في التأجيل</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">إمكانية التأجيل بسهولة.</p>
               </div>
             </article>
-            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] p-5 shadow-sm hover:shadow-md hover:bg-[#EFF6FF] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInRight">
-              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#2563EB]"><i class="fas fa-circle-play text-xl" aria-hidden="true"></i></span>
+            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] p-5 shadow-sm hover:shadow-md hover:bg-[#EFF6FF] dark:hover:bg-[#334155] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInRight">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#2563EB] dark:text-[#60A5FA]"><i class="fas fa-circle-play text-xl" aria-hidden="true"></i></span>
               <div class="flex-1 min-w-0 text-right">
-                <h3 class="font-bold text-[#1f2937] mb-1">محتوى مسجل مدى الحياة</h3>
-                <p class="text-sm text-[#6B7280]">مراجعات دائم بجودة عالية.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-1">محتوى مسجل مدى الحياة</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">مراجعات دائم بجودة عالية.</p>
               </div>
             </article>
-            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] p-5 shadow-sm hover:shadow-md hover:bg-[#FEF2F2] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInUp">
-              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#DC2626]"><i class="fas fa-handshake text-xl" aria-hidden="true"></i></span>
+            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] p-5 shadow-sm hover:shadow-md hover:bg-[#FEF2F2] dark:hover:bg-[#334155] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInUp">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#DC2626] dark:text-[#F87171]"><i class="fas fa-handshake text-xl" aria-hidden="true"></i></span>
               <div class="flex-1 min-w-0 text-right">
-                <h3 class="font-bold text-[#1f2937] mb-1">شراكات لغة إنجليزية</h3>
-                <p class="text-sm text-[#6B7280]">خصومات حصرية.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-1">شراكات لغة إنجليزية</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">خصومات حصرية.</p>
               </div>
             </article>
-            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] p-5 shadow-sm hover:shadow-md hover:bg-[#EFF6FF] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInRight">
-              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#0A66C2]"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></span>
+            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] p-5 shadow-sm hover:shadow-md hover:bg-[#EFF6FF] dark:hover:bg-[#334155] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInRight">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#0A66C2] dark:text-[#60A5FA]"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></span>
               <div class="flex-1 min-w-0 text-right">
-                <h3 class="font-bold text-[#1f2937] mb-1">احتراف LinkedIn</h3>
-                <p class="text-sm text-[#6B7280]">تظبيط بروفايلك المهني.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-1">احتراف LinkedIn</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">تظبيط بروفايلك المهني.</p>
               </div>
             </article>
-            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] p-5 shadow-sm hover:shadow-md hover:bg-[#FEFCE8] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInUp">
-              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#CA8A04]"><i class="fas fa-file-lines text-xl" aria-hidden="true"></i></span>
+            <article class="rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] p-5 shadow-sm hover:shadow-md hover:bg-[#FEFCE8] dark:hover:bg-[#334155] transition-all duration-200 flex gap-4 items-start wow animate__animated animate__fadeInUp">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#CA8A04] dark:text-[#FBBF24]"><i class="fas fa-file-lines text-xl" aria-hidden="true"></i></span>
               <div class="flex-1 min-w-0 text-right">
-                <h3 class="font-bold text-[#1f2937] mb-1">ورش عمل CV</h3>
-                <p class="text-sm text-[#6B7280]">تجهيز سيرتك الذاتية.</p>
+                <h3 class="font-bold text-[#1f2937] dark:text-[#F1F5F9] mb-1">ورش عمل CV</h3>
+                <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">تجهيز سيرتك الذاتية.</p>
               </div>
             </article>
           </div>
@@ -1049,18 +1050,18 @@
       </section>
 
       <!-- FAQ (same accordion component as curriculum) -->
-      <section id="faq" class="py-16 md:py-20 bg-[#F8F3FC]">
+      <section id="faq" class="py-16 md:py-20 bg-[#F8F3FC] dark:bg-[#0F172A] transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-5">
           <div class="wow animate__animated animate__fadeInUp mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">الأسئلة الشائعة</h2>
-            <p class="text-[#6B7280]">إجابات على أهم الأسئلة التي قد تدور في ذهنك قبل الاشتراك في الكورس.</p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 dark:text-[#F1F5F9]">الأسئلة الشائعة</h2>
+            <p class="text-[#6B7280] dark:text-[#94A3B8]">إجابات على أهم الأسئلة التي قد تدور في ذهنك قبل الاشتراك في الكورس.</p>
           </div>
           <div id="faq-accordion" class="space-y-3 wow animate__animated animate__fadeInRight" role="list">
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-1" id="faq-heading-1" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-1" id="faq-heading-1" data-accordion-trigger>
                   <span class="flex-1 font-semibold">هل أحتاج خبرة برمجية سابقة؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1068,15 +1069,15 @@
               </h3>
               <div id="faq-panel-1" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-1" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">لا، الكورس مصمم ليبدأ معك من الصفر تماماً. سنبدأ بشرح أساسيات البرمجة خطوة بخطوة ثم ننتقل إلى استخدام Python وبناء تطبيقات تعتمد على الذكاء الاصطناعي. حتى لو لم تكتب سطر كود من قبل ستتمكن من المتابعة بسهولة.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">لا، الكورس مصمم ليبدأ معك من الصفر تماماً. سنبدأ بشرح أساسيات البرمجة خطوة بخطوة ثم ننتقل إلى استخدام Python وبناء تطبيقات تعتمد على الذكاء الاصطناعي. حتى لو لم تكتب سطر كود من قبل ستتمكن من المتابعة بسهولة.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-2" id="faq-heading-2" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-2" id="faq-heading-2" data-accordion-trigger>
                   <span class="flex-1 font-semibold">هل الكورس عملي أم نظري؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1084,15 +1085,15 @@
               </h3>
               <div id="faq-panel-2" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-2" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">الكورس عملي بنسبة كبيرة. كل جلسة تحتوي على تطبيقات مباشرة وتمارين عملية ومشاريع حقيقية تساعدك على فهم المفاهيم وتطبيقها بنفسك.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">الكورس عملي بنسبة كبيرة. كل جلسة تحتوي على تطبيقات مباشرة وتمارين عملية ومشاريع حقيقية تساعدك على فهم المفاهيم وتطبيقها بنفسك.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-3" id="faq-heading-3" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-3" id="faq-heading-3" data-accordion-trigger>
                   <span class="flex-1 font-semibold">هل سنبني مشاريع حقيقية أثناء الكورس؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1100,15 +1101,15 @@
               </h3>
               <div id="faq-panel-3" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-3" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">نعم، سنقوم ببناء عدة مشاريع تطبيقية باستخدام Python وواجهات API ونماذج الذكاء الاصطناعي. الهدف هو أن تخرج من الكورس ولديك مشاريع يمكنك إضافتها إلى Portfolio الخاص بك.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">نعم، سنقوم ببناء عدة مشاريع تطبيقية باستخدام Python وواجهات API ونماذج الذكاء الاصطناعي. الهدف هو أن تخرج من الكورس ولديك مشاريع يمكنك إضافتها إلى Portfolio الخاص بك.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-4" id="faq-heading-4" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-4" id="faq-heading-4" data-accordion-trigger>
                   <span class="flex-1 font-semibold">كم مدة الكورس وعدد الجلسات؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1116,15 +1117,15 @@
               </h3>
               <div id="faq-panel-4" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-4" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">الكورس يتكون من 20 جلسة تدريبية مباشرة. كل جلسة تحتوي على شرح وتطبيق عملي ومهام تدريبية تساعدك على ترسيخ المفاهيم.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">الكورس يتكون من 20 جلسة تدريبية مباشرة. كل جلسة تحتوي على شرح وتطبيق عملي ومهام تدريبية تساعدك على ترسيخ المفاهيم.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-5" id="faq-heading-5" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-5" id="faq-heading-5" data-accordion-trigger>
                   <span class="flex-1 font-semibold">هل سأحصل على شهادة بعد انتهاء الكورس؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1132,15 +1133,15 @@
               </h3>
               <div id="faq-panel-5" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-5" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">نعم، ستحصل على شهادة معتمدة بعد إتمام الكورس وإكمال المشاريع المطلوبة.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">نعم، ستحصل على شهادة معتمدة بعد إتمام الكورس وإكمال المشاريع المطلوبة.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-6" id="faq-heading-6" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-6" id="faq-heading-6" data-accordion-trigger>
                   <span class="flex-1 font-semibold">هل يمكنني العمل Freelance بعد الكورس؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1148,15 +1149,15 @@
               </h3>
               <div id="faq-panel-6" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-6" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">نعم، بالإضافة إلى الجانب التقني سنشرح أيضاً أساسيات العمل الحر وكيفية بناء Portfolio وبدء العمل على منصات العمل الحر.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">نعم، بالإضافة إلى الجانب التقني سنشرح أيضاً أساسيات العمل الحر وكيفية بناء Portfolio وبدء العمل على منصات العمل الحر.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-7" id="faq-heading-7" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-7" id="faq-heading-7" data-accordion-trigger>
                   <span class="flex-1 font-semibold">هل يوجد دعم بعد انتهاء الكورس؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1164,15 +1165,15 @@
               </h3>
               <div id="faq-panel-7" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-7" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">نعم، ستحصل على متابعة داخل مجتمع تقني خاص بالطلبة بالإضافة إلى إمكانية طرح الأسئلة ومراجعة المشاريع.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">نعم، ستحصل على متابعة داخل مجتمع تقني خاص بالطلبة بالإضافة إلى إمكانية طرح الأسئلة ومراجعة المشاريع.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-8" id="faq-heading-8" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-8" id="faq-heading-8" data-accordion-trigger>
                   <span class="flex-1 font-semibold">هل يتم تسجيل المحاضرات؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1180,15 +1181,15 @@
               </h3>
               <div id="faq-panel-8" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-8" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">نعم، يتم توفير تسجيلات للجلسات حتى تتمكن من مراجعة المحتوى في أي وقت.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">نعم، يتم توفير تسجيلات للجلسات حتى تتمكن من مراجعة المحتوى في أي وقت.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-9" id="faq-heading-9" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-9" id="faq-heading-9" data-accordion-trigger>
                   <span class="flex-1 font-semibold">ما هي المتطلبات قبل بدء الكورس؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1196,21 +1197,21 @@
               </h3>
               <div id="faq-panel-9" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-9" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed mb-3">كل ما تحتاجه هو:</p>
-                  <ul class="text-sm text-[#6B7280] space-y-1.5 list-disc list-inside">
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed mb-3">كل ما تحتاجه هو:</p>
+                  <ul class="text-sm text-[#6B7280] dark:text-[#94A3B8] space-y-1.5 list-disc list-inside">
                     <li>جهاز كمبيوتر</li>
                     <li>اتصال جيد بالإنترنت</li>
                     <li>الرغبة في التعلم</li>
                   </ul>
-                  <p class="text-sm text-[#6B7280] leading-relaxed mt-3">ولا تحتاج أي خبرة مسبقة في البرمجة.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed mt-3">ولا تحتاج أي خبرة مسبقة في البرمجة.</p>
                 </div>
               </div>
             </div>
-            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-shadow hover:shadow-md" role="listitem">
+            <div class="curriculum-accordion-item rounded-xl bg-white border border-[#E5E7EB] shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md dark:bg-[#1E293B] dark:border-[#334155]" role="listitem">
               <h3 class="curriculum-accordion-header">
-                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-10" id="faq-heading-10" data-accordion-trigger>
+                <button type="button" class="accordion-trigger w-full flex items-center gap-4 p-5 text-right text-[#1f2937] hover:bg-[#F9FAFB] dark:text-[#F1F5F9] dark:hover:bg-[#334155] transition-colors rounded-xl border-0 cursor-pointer" aria-expanded="false" aria-controls="faq-panel-10" id="faq-heading-10" data-accordion-trigger>
                   <span class="flex-1 font-semibold">كيف يمكنني حجز مكاني في الكورس؟</span>
-                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] transition-transform duration-200" aria-hidden="true">
+                  <span class="accordion-arrow flex-shrink-0 w-5 h-5 flex items-center justify-center text-[#6B7280] dark:text-[#94A3B8] transition-transform duration-200" aria-hidden="true">
                     <i class="fas fa-plus fa-fw accordion-icon-plus" aria-hidden="true"></i>
                     <i class="fas fa-minus fa-fw accordion-icon-minus hidden" aria-hidden="true"></i>
                   </span>
@@ -1218,7 +1219,7 @@
               </h3>
               <div id="faq-panel-10" class="curriculum-accordion-content overflow-hidden transition-[max-height] duration-300 ease-out" role="region" aria-labelledby="faq-heading-10" style="max-height: 0">
                 <div class="accordion-content-inner px-5 pb-5 pt-0">
-                  <p class="text-sm text-[#6B7280] leading-relaxed">يمكنك حجز مكانك مباشرة عبر زر الواتساب في الصفحة والتواصل مع فريقنا لتأكيد الحجز ومعرفة تفاصيل الدفع.</p>
+                  <p class="text-sm text-[#6B7280] dark:text-[#94A3B8] leading-relaxed">يمكنك حجز مكانك مباشرة عبر زر الواتساب في الصفحة والتواصل مع فريقنا لتأكيد الحجز ومعرفة تفاصيل الدفع.</p>
                 </div>
               </div>
             </div>
@@ -1227,47 +1228,47 @@
       </section>
 
       <!-- CTA -->
-      <section id="cta" class="py-16 md:py-20">
+      <section id="cta" class="py-16 md:py-20 transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-5">
           <div class="max-w-md mx-auto text-center wow animate__animated animate__fadeInUp">
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">مستعد للبدء؟</h2>
-            <p class="text-[#6B7280] mb-8">اترك بياناتك وسنتواصل معك قريباً.</p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 dark:text-[#F1F5F9]">مستعد للبدء؟</h2>
+            <p class="text-[#6B7280] dark:text-[#94A3B8] mb-8">اترك بياناتك وسنتواصل معك قريباً.</p>
             <form class="text-right space-y-4" action="#" method="post" id="contact-form">
               <div>
-                <label for="name" class="block text-sm font-medium text-[#1f2937] mb-1.5">الاسم</label>
-                <input type="text" id="name" name="name" required placeholder="اسمك الكامل" class="w-full px-4 py-3 rounded-xl bg-[#FFFFFF] border border-[#E5E7EB] text-[#1f2937] placeholder-[#6B7280] focus:outline-none focus:border-[#6F42C1] transition" />
+                <label for="name" class="block text-sm font-medium text-[#1f2937] dark:text-[#F1F5F9] mb-1.5">الاسم</label>
+                <input type="text" id="name" name="name" required placeholder="اسمك الكامل" class="w-full px-4 py-3 rounded-xl bg-[#FFFFFF] border border-[#E5E7EB] text-[#1f2937] placeholder-[#6B7280] focus:outline-none focus:border-[#6F42C1] dark:bg-[#1E293B] dark:border-[#334155] dark:text-[#F1F5F9] dark:placeholder-[#64748B] dark:focus:border-[#8B5CF6] transition" />
               </div>
               <div>
-                <label for="email" class="block text-sm font-medium text-[#1f2937] mb-1.5">الإيميل</label>
-                <input type="email" id="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-3 rounded-xl bg-[#FFFFFF] border border-[#E5E7EB] text-[#1f2937] placeholder-[#6B7280] focus:outline-none focus:border-[#6F42C1] transition" dir="ltr" />
+                <label for="email" class="block text-sm font-medium text-[#1f2937] dark:text-[#F1F5F9] mb-1.5">الإيميل</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-3 rounded-xl bg-[#FFFFFF] border border-[#E5E7EB] text-[#1f2937] placeholder-[#6B7280] focus:outline-none focus:border-[#6F42C1] dark:bg-[#1E293B] dark:border-[#334155] dark:text-[#F1F5F9] dark:placeholder-[#64748B] dark:focus:border-[#8B5CF6] transition" dir="ltr" />
               </div>
               <div>
-                <label for="phone" class="block text-sm font-medium text-[#1f2937] mb-1.5">رقم التليفون</label>
-                <input type="tel" id="phone" name="phone" required placeholder="01xxxxxxxxx" class="w-full px-4 py-3 rounded-xl bg-[#FFFFFF] border border-[#E5E7EB] text-[#1f2937] placeholder-[#6B7280] focus:outline-none focus:border-[#6F42C1] transition" dir="ltr" />
+                <label for="phone" class="block text-sm font-medium text-[#1f2937] dark:text-[#F1F5F9] mb-1.5">رقم التليفون</label>
+                <input type="tel" id="phone" name="phone" required placeholder="01xxxxxxxxx" class="w-full px-4 py-3 rounded-xl bg-[#FFFFFF] border border-[#E5E7EB] text-[#1f2937] placeholder-[#6B7280] focus:outline-none focus:border-[#6F42C1] dark:bg-[#1E293B] dark:border-[#334155] dark:text-[#F1F5F9] dark:placeholder-[#64748B] dark:focus:border-[#8B5CF6] transition" dir="ltr" />
               </div>
-              <p class="text-sm text-[#6B7280]">سنُتواصل معك في أقرب وقت.</p>
-              <button type="submit" class="w-full py-3 rounded-xl font-semibold text-white bg-[#6F42C1] hover:bg-[#5B3A9E] transition">إرسال</button>
+              <p class="text-sm text-[#6B7280] dark:text-[#94A3B8]">سنُتواصل معك في أقرب وقت.</p>
+              <button type="submit" class="w-full py-3 rounded-xl font-semibold text-white bg-[#6F42C1] hover:bg-[#5B3A9E] dark:bg-[#8B5CF6] dark:hover:bg-[#7C3AED] transition">إرسال</button>
             </form>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="pt-12 pb-8 bg-[#1D213F] text-[#F0F0F0]">
+    <footer class="pt-12 pb-8 bg-[#1D213F] dark:bg-[#0F172A] text-[#F0F0F0] border-t border-transparent dark:border-[#334155] transition-colors duration-300">
       <div class="max-w-5xl mx-auto px-5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <!-- العمود الأول: الشعار والوصف ووسائل التواصل -->
           <div class="md:order-1">
-            <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-[#E5E7EB] mb-4">
+            <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] mb-4">
               <!-- <svg class="w-6 h-6 text-[#7A78FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="3" />
                 <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
               </svg> -->
-              <span class="font-bold text-[#1D213F]">
-                <img src="https://eraasoft.com/assets/website/assets/media/Logo/Nav-Logo.svg" />
+              <span class="font-bold text-[#1D213F] dark:text-[#F1F5F9]">
+                <img src="https://eraasoft.com/assets/website/assets/media/Logo/Nav-Logo.svg" alt="EraaSoft" class="dark:invert" />
               </span>
             </div>
-            <p class="text-sm text-[#F0F0F0] max-w-xs leading-relaxed mb-4">إيراسوفت: بوابتك لاحتراف التكنولوجيا. تقدم تعليماً عملياً يواكب سوق العمل.</p>
+            <p class="text-sm text-[#F0F0F0] dark:text-[#94A3B8] max-w-xs leading-relaxed mb-4">إيراسوفت: بوابتك لاحتراف التكنولوجيا. تقدم تعليماً عملياً يواكب سوق العمل.</p>
             <div class="flex gap-3">
               <a href="#" class="text-white hover:opacity-80 transition" aria-label="YouTube">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
@@ -1282,31 +1283,31 @@
           </div>
           <!-- العمود الثاني: تواصل معنا -->
           <div class="md:order-2">
-            <h4 class="text-sm font-semibold text-[#7A78FF] mb-3">تواصل معنا</h4>
-            <a href="tel:01068268354" class="flex items-center gap-2 text-sm text-[#F0F0F0] hover:text-[#7A78FF] transition mb-2">
-              <svg class="w-4 h-4 text-[#7A78FF] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+            <h4 class="text-sm font-semibold text-[#7A78FF] dark:text-[#A78BFA] mb-3">تواصل معنا</h4>
+            <a href="tel:01068268354" class="flex items-center gap-2 text-sm text-[#F0F0F0] dark:text-[#94A3B8] hover:text-[#7A78FF] dark:hover:text-[#A78BFA] transition mb-2">
+              <svg class="w-4 h-4 text-[#7A78FF] dark:text-[#A78BFA] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
               01068268354
             </a>
-            <a href="tel:01129079963" class="flex items-center gap-2 text-sm text-[#F0F0F0] hover:text-[#7A78FF] transition">
-              <svg class="w-4 h-4 text-[#7A78FF] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+            <a href="tel:01129079963" class="flex items-center gap-2 text-sm text-[#F0F0F0] dark:text-[#94A3B8] hover:text-[#7A78FF] dark:hover:text-[#A78BFA] transition">
+              <svg class="w-4 h-4 text-[#7A78FF] dark:text-[#A78BFA] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
               01129079963
             </a>
           </div>
           <!-- العمود الثالث: العناوين -->
           <div class="md:order-3">
-            <h4 class="text-sm font-semibold text-[#7A78FF] mb-3">العناوين</h4>
-            <p class="flex items-start gap-2 text-sm text-[#F0F0F0] mb-2">
-              <svg class="w-4 h-4 text-[#7A78FF] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
+            <h4 class="text-sm font-semibold text-[#7A78FF] dark:text-[#A78BFA] mb-3">العناوين</h4>
+            <p class="flex items-start gap-2 text-sm text-[#F0F0F0] dark:text-[#94A3B8] mb-2">
+              <svg class="w-4 h-4 text-[#7A78FF] dark:text-[#A78BFA] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
               الدقى: 5 شارع مصدق - الدور الثالث
             </p>
-            <p class="flex items-start gap-2 text-sm text-[#F0F0F0]">
-              <svg class="w-4 h-4 text-[#7A78FF] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
+            <p class="flex items-start gap-2 text-sm text-[#F0F0F0] dark:text-[#94A3B8]">
+              <svg class="w-4 h-4 text-[#7A78FF] dark:text-[#A78BFA] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
               مدينة نصر: 6 شارع عماد الدين
             </p>
           </div>
         </div>
-        <div class="pt-6 border-t border-[#2d3254]">
-          <p class="text-sm text-[#F0F0F0]/80">© 2026 EraaSoft. جميع الحقوق محفوظة.</p>
+        <div class="pt-6 border-t border-[#2d3254] dark:border-[#334155]">
+          <p class="text-sm text-[#F0F0F0]/80 dark:text-[#94A3B8]">© 2026 EraaSoft. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>
