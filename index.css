@@ -26,6 +26,14 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   }
 }
+@media (max-width: 768px) {
+  html.dark #nav {
+    background-color: #0F172A;
+  }
+  html.dark #nav.is-open {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
 
 /* العدادات: اتجاه الأرقام */
 #market-insights [data-target] {
@@ -64,6 +72,10 @@
     box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.2), 0 2px 4px -2px rgba(139, 92, 246, 0.15);
   }
 }
+html.dark .curriculum-accordion-item.is-open {
+  border-color: #8B5CF6;
+  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.2), 0 2px 4px -2px rgba(139, 92, 246, 0.15);
+}
 .accordion-trigger:focus-visible {
   outline: 2px solid #6F42C1;
   outline-offset: 2px;
@@ -72,6 +84,9 @@
   .accordion-trigger:focus-visible {
     outline-color: #8B5CF6;
   }
+}
+html.dark .accordion-trigger:focus-visible {
+  outline-color: #8B5CF6;
 }
 
 /* FAQ accordion: plus/minus icon (no rotation) */
@@ -103,6 +118,12 @@
       linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   }
+}
+html.dark .pricing-section-bg {
+  background-color: #0F172A;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 }
 
 /* WhatsApp CTA hover */

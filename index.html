@@ -12,7 +12,7 @@
     <!-- Tailwind config.js -->
     <script>
       tailwind.config = {
-        darkMode: 'media',
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: { sans: ['Cairo', 'system-ui', 'sans-serif'] },
@@ -33,6 +33,14 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="index.css" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
+      })();
+    </script>
   </head>
   <body class="bg-[#F8F9FE] text-[#1f2937] font-sans antialiased overflow-x-hidden transition-colors duration-300 dark:bg-[#0F172A] dark:text-[#F1F5F9]">
     <!-- Header -->
@@ -45,6 +53,11 @@
           <a href="#pricing" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] dark:border-[#334155] text-sm font-medium text-[#6B7280] hover:text-[#1f2937] dark:text-[#94A3B8] dark:hover:text-[#F1F5F9]">الأسعار</a>
           <a href="#faq" class="py-3 md:py-0 border-b md:border-0 border-[#E5E7EB] dark:border-[#334155] text-sm font-medium text-[#6B7280] hover:text-[#1f2937] dark:text-[#94A3B8] dark:hover:text-[#F1F5F9]">الأسئلة الشائعة</a>
           <a href="#cta" class="mt-4 md:mt-0 inline-flex justify-center px-5 py-2.5 rounded-xl font-semibold text-white bg-[#6F42C1] hover:bg-[#5B3A9E] dark:bg-[#8B5CF6] dark:hover:bg-[#7C3AED] transition">احجز مقعدك</a>
+          <button id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="تبديل الوضع الليلي" class="flex-shrink-0 relative w-14 h-8 rounded-full bg-gray-200 dark:bg-purple-600 transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6F42C1] dark:focus-visible:ring-purple-400 focus-visible:ring-offset-2 mt-4 md:mt-0">
+            <span class="theme-icon theme-icon-sun absolute top-1/2 -translate-y-1/2 left-2 text-amber-500 text-sm transition-all duration-300 ease-in-out opacity-100 dark:opacity-40 dark:scale-75" aria-hidden="true"><i class="fas fa-sun"></i></span>
+            <span class="theme-icon theme-icon-moon absolute top-1/2 -translate-y-1/2 right-2 text-indigo-200 text-sm transition-all duration-300 ease-in-out opacity-40 scale-75 dark:opacity-100 dark:scale-100" aria-hidden="true"><i class="fas fa-moon"></i></span>
+            <span class="theme-thumb absolute top-1 left-1 w-6 h-6 rounded-full bg-white shadow-md transition-all duration-300 ease-in-out dark:left-7 rtl:left-auto rtl:right-1 rtl:dark:right-auto rtl:dark:left-7" aria-hidden="true"></span>
+          </button>
         </nav>
         <button id="menu-toggle" class="md:hidden flex flex-col gap-1 p-2 text-[#1f2937] dark:text-[#F1F5F9]" aria-label="فتح القائمة">
           <span class="w-5 h-0.5 bg-current rounded"></span>
@@ -926,6 +939,7 @@
                     <span class="text-[#6B7280] dark:text-[#94A3B8] mt-0.5"><i class="fas fa-clock" aria-hidden="true"></i></span>
                     <div>
                       <p class="text-[#6B7280] dark:text-[#94A3B8] text-xs mb-0.5">المواعيد:</p>
+                      <p class="text-[#374151] dark:text-[#F1F5F9] text-sm font-medium">الأحد والأربعاء</p>
                       <p class="text-[#374151] dark:text-[#F1F5F9] text-sm font-medium">الأثنين والخميس</p>
                     </div>
                   </div>
