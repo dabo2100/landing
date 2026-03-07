@@ -3,9 +3,18 @@
   scroll-behavior: smooth;
 }
 
+/* WOW + animate.css: مدة الانيميشن ثانية واحدة لكل السكاشنز */
+.wow.animate__animated {
+  --animate-duration: 1s;
+}
+
 @media (max-width: 768px) {
+  #nav {
+    background-color: #ffffff;
+  }
   #nav.is-open {
     transform: translateX(0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -43,6 +52,20 @@
 .accordion-trigger:focus-visible {
   outline: 2px solid #6F42C1;
   outline-offset: 2px;
+}
+
+/* FAQ accordion: plus/minus icon (no rotation) */
+#faq-accordion .curriculum-accordion-item.is-open .accordion-arrow {
+  transform: none;
+}
+#faq-accordion .accordion-icon-minus {
+  display: none;
+}
+#faq-accordion .accordion-trigger[aria-expanded="true"] .accordion-icon-plus {
+  display: none;
+}
+#faq-accordion .accordion-trigger[aria-expanded="true"] .accordion-icon-minus {
+  display: inline-block;
 }
 
 /* Pricing section: dark blue with grid pattern */
