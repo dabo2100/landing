@@ -17,6 +17,34 @@
 })();
 
 (function () {
+  var themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) return;
+
+  function isDark() {
+    return document.documentElement.classList.contains('dark');
+  }
+
+  function setTheme(dark) {
+    if (dark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+    themeToggle.setAttribute('aria-checked', dark ? 'true' : 'false');
+    themeToggle.setAttribute('aria-label', dark ? 'تفعيل الوضع الفاتح' : 'تبديل الوضع الليلي');
+  }
+
+  themeToggle.addEventListener('click', function () {
+    setTheme(!isDark());
+  });
+
+  themeToggle.setAttribute('aria-checked', isDark() ? 'true' : 'false');
+  if (isDark()) themeToggle.setAttribute('aria-label', 'تفعيل الوضع الفاتح');
+})();
+
+(function () {
   var section = document.getElementById('market-insights');
   var counters = document.querySelectorAll('#market-insights [data-target]');
   if (!section || !counters.length) return;
